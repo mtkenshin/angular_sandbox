@@ -1,12 +1,17 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
+import { WeatherComponent } from './weather/weather.component';
+import { WeatherModule } from './weather/weather.module';
 @Component({
   selector: 'view-home',
-  standalone: true,
-  imports: [],
+  imports: [WeatherModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
+  standalone: true,
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
   title = 'Home';
+
+  ngOnInit(): void {
+      
+  }
 }
