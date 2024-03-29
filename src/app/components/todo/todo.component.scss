@@ -1,0 +1,84 @@
+.todo-component-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 100px;
+
+    h1 {
+        font-weight: 700;
+        font-size: 18px;
+        color: black;
+    }
+
+    .submit-wrapper {
+        position: relative;
+        .todo-input {
+            box-sizing: border-box;
+            width: 100%;
+            height: 32px;
+            padding: 8px 32px 8px 16px;
+            border-radius: 8px;
+            outline: none;
+        }
+        .add {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            font-size: 18px;
+            cursor: pointer;
+            background-color: green;
+            color: white;
+            border-radius: 0 8px 8px 0;
+        }
+    }
+
+ 
+    table {
+        width: 80%;
+        margin: 0 auto;
+        border-radius: 18px;
+        border: 1px solid black;
+        border-collapse: collapse;
+        thead {
+            th {
+                background-color: rgb(43, 148, 43);
+                color: white;
+                padding: 8px;
+            }
+        }
+        tbody {
+            tr {
+                background-color: rgb(144, 206, 144);
+                color: white;
+                td {
+                    text-align: center;
+                    width: 33%;
+                    padding: 8px;
+                    button{
+                        all: unset;
+                        cursor: pointer;
+                        background: red;
+                        margin: auto;
+                        width: 32px;
+                         height: 32px;
+                         border-radius: 8px;
+                        svg {
+                            color: white;
+                            width: 16px;
+                            height: 16px;
+                        }
+                    }
+                }
+                &:nth-child(even) {
+                    background-color: rgb(204, 231, 204);
+                }
+            }
+
+        }
+    }
+
+}

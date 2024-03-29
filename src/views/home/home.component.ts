@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WeatherComponent } from './weather/weather.component';
 import { WeatherModule } from './weather/weather.module';
+
 @Component({
   selector: 'view-home',
   imports: [WeatherModule],
