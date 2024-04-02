@@ -1,15 +1,15 @@
 import { createReducer, on} from "@ngrx/store";
 import { addToListAction, removeFromListAction } from "./todo.actions";
 
-export interface TTodoItem {
+export interface ITodoItem {
     id: string,
     desc: string
 }
-export interface TTodoState {
-    todoList: Array<TTodoItem>
+export interface ITodoState {
+    todoList: Array<ITodoItem>
 }
 
-export const initialTodoState:TTodoState = {
+export const initialTodoState:ITodoState = {
     todoList: []
 }
 

@@ -1,12 +1,12 @@
 import { createReducer, on } from "@ngrx/store";
 import {incrementCounterAction, decrementCounterAction, resetCounterAction} from './counter.actions' 
 
-export interface TCounterState {
+export interface ICounterState {
     count: number;
 }
 
 //Created initial state for store
-export const initialCounterState: TCounterState = {
+export const initialCounterState: ICounterState = {
     count: 0
 }
 

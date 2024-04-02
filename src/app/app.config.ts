@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 import { provideState, provideStore } from '@ngrx/store';
 import { counterReducer } from './state/counter/counter.reducer';
 import { todoReducer } from './state/todo/todo.reducer';
+import { sandboxReducer } from './state/sandbox/sandbox.reducer';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,6 +16,9 @@ export const appConfig: ApplicationConfig = {
     ),
     provideState(
       { name: 'todo', reducer: todoReducer}
-    )
+    ),
+    provideState(
+      { name: 'sandbox', reducer: sandboxReducer}
+    ),
   ]
 };

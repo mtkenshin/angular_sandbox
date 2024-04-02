@@ -5,7 +5,7 @@ import { selectTodoList } from "../../state/todo/todo.selector";
 import { AppState } from "../../state/app.state";
 
 import { addToListAction, removeFromListAction } from "../../state/todo/todo.actions";
-import { TTodoItem } from "../../state/todo/todo.reducer";
+import { ITodoItem } from "../../state/todo/todo.reducer";
 import { v4 as uuidv4 } from 'uuid';
 
 @Component({
@@ -15,10 +15,10 @@ import { v4 as uuidv4 } from 'uuid';
 })
 
 export class TodoComponent {
-    protected _userInput;
-    protected todo$: Observable<Array<TTodoItem>>
+    protected userInput;
+    protected todo$: Observable<Array<ITodoItem>>
     constructor(private store: Store<AppState>) {
-        this._userInput = '';
+        this.userInput = '';
         this.todo$ = store.select(selectTodoList);
         this.todo$.subscribe({
             next: (items) => {
@@ -34,9 +34,9 @@ export class TodoComponent {
     }
 
     protected addToList = () => {
-        const sendPayload:TTodoItem = {
+        const sendPayload:ITodoItem = {
             id: uuidv4(),
-            desc: this._userInput
+            desc: this.userInput
         }
         this.store.dispatch(addToListAction(sendPayload))
     }

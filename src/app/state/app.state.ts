@@ -1,7 +1,9 @@
-import { TCounterState } from "./counter/counter.reducer";
-import { TTodoState } from "./todo/todo.reducer";
+import { ICounterState } from "./counter/counter.reducer";
+import { ISandbox } from "./sandbox/sandbox.reducer";
+import { ITodoState } from "./todo/todo.reducer";
 
 export interface AppState {
-    counter: TCounterState
-    todo: TTodoState
+    counter: ICounterState
+    todo: ITodoState,
+    sandbox: ISandbox
 }

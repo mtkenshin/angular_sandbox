@@ -2,6 +2,10 @@ header {
     background-color: #333;
     color: #fff;
     padding: 10px 20px;
+    position: fixed;
+    width: 100vw;
+    height: 40px;
+    box-sizing: border-box;
     nav {
         ul {
             list-style-type: none;

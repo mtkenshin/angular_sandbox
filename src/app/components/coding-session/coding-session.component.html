@@ -1,0 +1,22 @@
+<section id="heroesSection">
+    <div id="inputContainer">
+        <input id="heroSearch" type="text" name="hero-search" placeholder="Search characters" (keyup)="filterCharacters($event)"/>
+    </div>
+    <div id="flexContainer">
+        <ng-container *ngIf="filteredList">
+            <ng-container *ngIf="filteredList.length > 0; else noItemsTemplate">
+                <div *ngFor="let hero of filteredList" class="hero">
+                    <p class="hero-header">
+                        {{hero.name}}
+                    </p>
+                    <div class="image-container">
+                        <img [src]="hero.image.url" alt="hulk" loading="lazy">
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+        <ng-template #noItemsTemplate>
+            <p>The search resulted in 0 results</p>
+        </ng-template>
+    </div>
+</section>
