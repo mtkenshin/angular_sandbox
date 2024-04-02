@@ -1,0 +1,9 @@
+<section class="sandbox-area-wrapper">
+    <button class="btn btn-dummy" (click)="setTestDummyVal()">Test Store Value</button>
+    <p class="span-dummy">Current Value: <span>{{ _testDummy$ | async }}</span></p>
+
+    <div class="btn-group">
+        <button class="btn btn-get" (click)="sendGETRequestToPlaceholder()">GET</button>
+        <button class="btn btn-post" (click)="sendPOSTRequestToPlaceholder()">POST</button>
+    </div>
+</section>

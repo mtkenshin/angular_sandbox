@@ -1,0 +1,57 @@
+#heroesSection {
+    width: 100vw;
+    padding: 60px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #636161;
+    box-sizing: border-box;
+    #inputContainer {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        #heroSearch{
+            width: 200px;
+            border-radius: 8px;
+            outline: none;
+            padding: 8px 32px;
+        }
+    }
+
+    #flexContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        .hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 180px;
+            height: 280px;
+            border-radius: 8px;
+            background: grey;
+            overflow: hidden;
+     
+            .hero-header{
+                color: white;
+                padding: 10px 15px;
+                font-weight: 600;
+            }
+
+            .image-container {
+                img {
+                    width: 100%;
+                }
+            }
+
+            &:nth-child(odd) {
+                background-color: rgb(168, 131, 131);
+            }
+        }
+    }
+
+
+}

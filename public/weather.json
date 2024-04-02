@@ -1,0 +1,24 @@
+
+    {
+        "location": {
+            "city": "New York",
+            "country": "US",
+            "latitude": 40.7128,
+            "longitude": -74.0060
+        },
+        "weather": {
+            "description": "Partly cloudy",
+            "temperature": {
+                "current": 15,
+                "min": 12,
+                "max": 18
+            },
+            "humidity": 60,
+            "wind": {
+                "speed": 10,
+                "direction": "NE"
+            },
+            "sunrise": "06:30 AM",
+            "sunset": "07:00 PM"
+        }
+    }

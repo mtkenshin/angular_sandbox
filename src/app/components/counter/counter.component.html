@@ -1,0 +1,9 @@
+<div class="counter-wrapper">
+    <p class="counter-title">This current Counter value is {{ count$ | async }}</p>
+
+    <div class="btn-group">
+        <button (click)="increment()" class="btn btn-inc">Increment</button>
+        <button (click)="decrement()" class="btn btn-dec">Decrement</button>
+        <button (click)="reset()"class="btn btn-res">Reset</button>
+    </div>
+</div>
